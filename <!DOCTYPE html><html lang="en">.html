@@ -1,0 +1,143 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All-in-One Hub</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+    }
+    header {
+      background: #000;
+      color: white;
+      text-align: center;
+      padding: 1em 0;
+      font-size: 24px;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 20px;
+    }
+    .card img {
+      max-width: 100px;
+      margin-bottom: 15px;
+    }
+    .card h3 {
+      margin: 0 0 10px;
+    }
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 16px;
+      background: #000;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .card a:hover {
+      background: #444;
+    }
+    .chatbot-box, .admin-box {
+      max-width: 600px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .chatbot-box h2, .admin-box h2 {
+      text-align: center;
+    }
+    .chatbot-box input[type="text"], .admin-box input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    .admin-box button {
+      margin-top: 10px;
+      padding: 10px;
+      width: 100%;
+      background: #000;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .admin-box button:hover {
+      background: #444;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #000;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    All-in-One Web Hub
+  </header>  <div class="container">
+    <div class="card">
+      <img src="https://img.icons8.com/ios-filled/100/movie-projector.png" alt="Film Download">
+      <h3>Film Download</h3>
+      <a href="#">Visit</a>
+    </div><div class="card">
+  <img src="https://img.icons8.com/ios-filled/100/controller.png" alt="Online Games">
+  <h3>Online Games</h3>
+  <a href="#">Play</a>
+</div>
+
+<div class="card">
+  <img src="https://img.icons8.com/ios-filled/100/youtube.png" alt="YouTube Downloader">
+  <h3>YouTube Video Download</h3>
+  <a href="#">Download</a>
+</div>
+
+<div class="card">
+  <img src="https://img.icons8.com/ios-filled/100/tools.png" alt="More Tools">
+  <h3>More Tools</h3>
+  <a href="#">Explore</a>
+</div>
+
+  </div>  <div class="chatbot-box">
+    <h2>Ask AI Anything</h2>
+    <input type="text" placeholder="Type your question here..." disabled>
+    <p style="text-align:center; color: gray; margin-top:10px;">(Chatbot coming soon...)</p>
+  </div>  <div class="admin-box">
+    <h2>Admin Access</h2>
+    <p>Only Raja can add a new website</p>
+    <input type="password" id="adminPass" placeholder="Enter admin password">
+    <button onclick="checkAdminAccess()">Add New Website</button>
+    <p id="adminMessage" style="text-align:center; color: green; margin-top:10px;"></p>
+  </div>  <footer>
+    Made with love by Raja<br>
+    Contact me: rb2709467@gmail.com
+  </footer>  <script>
+    function checkAdminAccess() {
+      const password = document.getElementById("adminPass").value;
+      const message = document.getElementById("adminMessage");
+      if(password === "raja123") {
+        message.style.color = "green";
+        message.innerText = "Access granted! You can now add a new website.";
+      } else {
+        message.style.color = "red";
+        message.innerText = "Incorrect password. Access denied.";
+      }
+    }
+  </script></body>
+</html>
